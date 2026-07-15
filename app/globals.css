@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ==========================
+     Base Colors
+     ========================== */
+
+  --background: #F8F7F2;
+  --foreground: #2f342F;
+
+  /* Theme Colors */
+  --primary: #5a6e51;
+  --secondary: #D8D3C4;
+  --accent: #B8924A;
+
+  /* Text */
+  --text: #2F342F;
+  --text-light: #6D746D;
+
+  /* Cards */
+  --card: #FCFBF8;
+  --border: #D8D3C4;
+
+  /* ==========================
+     Optional Accent Colors
+     ========================== */
+
+  --accent: #D4AF37;
+  --accent-light: #f4f6f1;
 }
 
 @theme inline {
+  /* Colors */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+
+  --color-text: var(--text);
+  --color-text-light: var(--text-light);
+
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
+  /* Fonts */
+
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================
+   Reset
+========================================== */
+
+* {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  background: linear-gradient(
+    180deg,
+    #faf9f6 0%,
+    #f6f7f3 45%,
+    #ffffff 100%
+  );
+
+  color: var(--text);
+
+  font-family: var(--font-inter);
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    180deg,
+    #FCFBF8 0%,
+    #F8F7F2 45%,
+    #F3F1EA 100%
+  );
+
+  color: var(--text);
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   Typography
+========================================== */
+
+.heading-font {
+  font-family: var(--font-playfair);
+}
+
+.body-font {
+  font-family: var(--font-inter);
+}
+
+/* ==========================================
+   Selection
+========================================== */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b7c2af;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
