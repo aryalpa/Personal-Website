@@ -5,7 +5,7 @@ import { Award } from "lucide-react";
 
 export default function AwardHero() {
   return (
-    <section className="pb-20 pt-8">
+    <section className="pb-16 pt-8 sm:pb-20">
       <div className="mx-auto max-w-4xl text-center">
         {/* Badge */}
 
@@ -21,7 +21,8 @@ export default function AwardHero() {
             border
             border-border
             bg-[var(--primary-light)]
-            px-5
+            max-w-full
+            px-4
             py-2
             shadow-sm
           "
@@ -36,8 +37,9 @@ export default function AwardHero() {
               text-sm
               font-semibold
               uppercase
-              tracking-[0.25em]
+              tracking-[0.16em]
               text-text
+              sm:tracking-[0.25em]
             "
           >
             Awards & Accomplishments
@@ -56,9 +58,10 @@ export default function AwardHero() {
           className="
             heading-font
             mt-8
-            text-5xl
+            text-4xl
             leading-tight
             text-text
+            sm:text-5xl
             md:text-6xl
           "
         >

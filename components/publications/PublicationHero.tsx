@@ -70,7 +70,8 @@ export default function PublicationsHero({
     border
     border-[var(--primary)]/20
     bg-[var(--primary)]/8
-    px-5
+    max-w-full
+    px-4
     py-2
     shadow-sm
     backdrop-blur-sm
@@ -87,8 +88,9 @@ export default function PublicationsHero({
     text-xs
     font-semibold
     uppercase
-    tracking-[0.35em]
+    tracking-[0.2em]
     text-[var(--primary)]
+    sm:tracking-[0.35em]
   "
 >
               Research Archive
@@ -102,9 +104,10 @@ export default function PublicationsHero({
             className="
               heading-font
               mt-8
-              text-6xl
+              text-4xl
               leading-tight
               text-[var(--text)]
+              sm:text-5xl
               lg:text-7xl
             "
           >
@@ -113,7 +116,7 @@ export default function PublicationsHero({
 
           {/* Stats */}
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-16 sm:grid-cols-3 sm:gap-8">
 
             {/* Publications */}
 
@@ -123,20 +126,22 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-8
+                p-6
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
+                sm:p-8
               "
             >
 
               <h2
   className="
-    text-4xl
+    text-3xl
     font-bold
     text-[var(--primary)]
+    sm:text-4xl
   "
 >
   {publicationCount}
@@ -161,20 +166,22 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-8
+                p-6
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
+                sm:p-8
               "
             >
 
               <h2
                 className="
-                  text-4xl
+                  text-3xl
                   font-bold
                   text-[var(--accent)]
+                  sm:text-4xl
                 "
               >
                 414
@@ -199,12 +206,13 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-8
+                p-6
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
+                sm:p-8
               "
             >
 

@@ -22,7 +22,7 @@ export default function ContactGrid({
 
         {/* Contact Information */}
 
-        <div className="grid items-center py-10 md:grid-cols-2">
+        <div className="grid gap-10 py-8 md:grid-cols-2 md:gap-0 md:py-10">
 
           {/* Email */}
 
@@ -30,7 +30,7 @@ export default function ContactGrid({
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center justify-center px-10 text-center"
+            className="flex flex-col items-center justify-center px-0 text-center md:px-10"
           >
             <div className="flex items-center gap-3">
               <Mail
@@ -77,10 +77,15 @@ export default function ContactGrid({
               flex-col
               items-center
               justify-center
-              border-l
+              border-t
               border-border
-              px-10
+              px-0
+              pt-10
               text-center
+              md:border-l
+              md:border-t-0
+              md:px-10
+              md:pt-0
             "
           >
             <div className="flex items-center gap-3">

@@ -52,7 +52,7 @@ export default function TalkCard({ talk }: Props) {
         "
       />
 
-      <div className="p-8">
+      <div className="p-5 sm:p-6 lg:p-8">
 
         {/* Header */}
 
@@ -99,14 +99,17 @@ export default function TalkCard({ talk }: Props) {
 
         <h2
           className="
-            mt-6
-            text-3xl
+            mt-4
+            text-xl
             font-bold
             leading-tight
             text-[var(--text)]
             transition-colors
             duration-300
             group-hover:text-[var(--accent)]
+            sm:text-2xl
+            lg:mt-6
+            lg:text-3xl
           "
         >
           {talk.title}
@@ -114,7 +117,7 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Event */}
 
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-5 flex items-center gap-3 text-sm sm:text-base lg:mt-8">
 
           <Mic
             size={20}
@@ -134,7 +137,7 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Location */}
 
-        <div className="mt-4 flex items-center gap-3">
+        <div className="mt-3 flex items-center gap-3 text-sm sm:text-base lg:mt-4">
 
           <MapPin
             size={18}
@@ -149,7 +152,7 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Date */}
 
-        <div className="mt-3 flex items-center gap-3">
+        <div className="mt-3 flex items-center gap-3 text-sm sm:text-base">
 
           <Calendar
             size={18}
@@ -166,9 +169,14 @@ export default function TalkCard({ talk }: Props) {
 
         <p
           className="
-            mt-8
-            leading-8
+            mt-5
+            text-sm
+            leading-6
             text-[var(--text-light)]
+            sm:text-base
+            sm:leading-7
+            lg:mt-8
+            lg:leading-8
           "
         >
           {talk.description}
@@ -178,7 +186,7 @@ export default function TalkCard({ talk }: Props) {
 
         {talk.link && (
 
-          <div className="mt-8">
+          <div className="mt-5 lg:mt-8">
 
             <Link
               href={talk.link}
@@ -191,6 +199,7 @@ export default function TalkCard({ talk }: Props) {
                 bg-[var(--primary)]
                 px-6
                 py-3
+                text-sm
                 font-medium
                 text-white
                 transition-all

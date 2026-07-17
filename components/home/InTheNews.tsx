@@ -11,9 +11,9 @@ interface Props {
 
 export default function InTheNews({ news }: Props) {
   return (
-    <section className="py-20">
+    <section className="py-12 sm:py-16 lg:py-20">
 
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6 lg:px-0">
 
         {/* Heading */}
 
@@ -28,7 +28,7 @@ export default function InTheNews({ news }: Props) {
           }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mb-20 max-w-3xl text-center"
+          className="mx-auto mb-10 max-w-3xl text-center sm:mb-14 lg:mb-20"
         >
 
           {/* Badge */}
@@ -40,14 +40,17 @@ export default function InTheNews({ news }: Props) {
               border
               border-[var(--primary)]/20
               bg-[var(--primary)]/10
-              px-5
+              px-4
               py-2
-              text-sm
+              text-xs
               font-semibold
               uppercase
-              tracking-[0.25em]
+              tracking-[0.16em]
               text-[var(--primary)]
               shadow-sm
+              sm:px-5
+              sm:text-sm
+              sm:tracking-[0.25em]
             "
           >
             Featured Stories
@@ -59,8 +62,10 @@ export default function InTheNews({ news }: Props) {
             className="
               heading-font
               mt-6
-              text-5xl
+              text-3xl
               text-[var(--text)]
+              sm:text-4xl
+              lg:text-5xl
             "
           >
             In the News
@@ -71,9 +76,13 @@ export default function InTheNews({ news }: Props) {
           <p
             className="
               mt-6
-              text-lg
-              leading-8
+              text-sm
+              leading-6
               text-[var(--text-light)]
+              sm:text-base
+              sm:leading-7
+              lg:text-lg
+              lg:leading-8
             "
           >
             Research discoveries, scientific achievements and
@@ -85,7 +94,7 @@ export default function InTheNews({ news }: Props) {
 
         {/* Articles */}
 
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
 
           {news.map((article, index) => (
 

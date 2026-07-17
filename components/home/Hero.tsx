@@ -8,7 +8,7 @@ import {
   Download,
   GraduationCap,
 } from "lucide-react";
-import { FiExternalLink, FiMail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import { FaLinkedinIn, FaOrcid } from "react-icons/fa6";
 import { urlFor } from "@/sanity/image";
 import { fileUrl } from "@/sanity/file";
@@ -19,7 +19,7 @@ interface HeroProps {
 
 export default function Hero({ home }: HeroProps) {
   return (
-    <section className="relative flex min-h-[calc(85vh-80px)] items-center overflow-hidden">
+    <section className="relative flex min-h-[calc(85vh-80px)] items-center overflow-hidden py-12 lg:py-0">
 
       {/* Magazine Banner Video */}
 
@@ -59,13 +59,13 @@ export default function Hero({ home }: HeroProps) {
 
       {/* Decorative Background */}
 
-      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-primary-light/60 blur-3xl" />
+      <div className="absolute left-4 top-20 h-48 w-48 rounded-full bg-primary-light/60 blur-3xl sm:left-20 sm:h-72 sm:w-72" />
 
-      <div className="absolute bottom-10 right-20 h-80 w-80 rounded-full bg-accent-light blur-3xl" />
+      <div className="absolute bottom-10 right-4 h-52 w-52 rounded-full bg-accent-light blur-3xl sm:right-20 sm:h-80 sm:w-80" />
 
       <Container className="relative z-10">
 
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left */}
 
@@ -75,18 +75,18 @@ export default function Hero({ home }: HeroProps) {
             transition={{ duration: 0.7 }}
           >
 
-            <h1 className="heading-font text-5xl lg:text-6xl pb-10 font-semibold leading-tight drop-shadow-2xl">
+            <h1 className="heading-font pb-6 text-4xl font-semibold leading-tight drop-shadow-2xl sm:text-5xl lg:pb-10 lg:text-6xl">
   <span className="text-white">{home.firstName} </span>
   <span className="text-[#D4AF37]">{home.lastName}</span>
   <span className="text-white">, {home.degree}</span>
 </h1>
 
 
-<p className="mt-8 max-w-xl text-lg leading-8 text-[var(--text)]">
+<p className="mt-6 max-w-xl text-base font-medium leading-8 text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)] sm:mt-8 sm:text-lg lg:text-[var(--text)] lg:drop-shadow-none">
   {home.description}
 </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap">
 <a
   href={home.cv}
   target="_blank"
@@ -96,6 +96,7 @@ export default function Hero({ home }: HeroProps) {
     items-center
     gap-2
     rounded-full
+    justify-center
     px-7
     py-3
     font-medium
@@ -119,6 +120,7 @@ rel="noopener noreferrer"
 className="
                   flex
                   items-center
+                  justify-center
                   gap-2
                   rounded-full
                   border
@@ -139,7 +141,7 @@ className="
 </a>
             </div>
 
-            <div className="mt-8 flex items-center gap-8 text-sm font-medium">
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-medium">
 
   {/* ORCID */}
   <a
@@ -197,7 +199,7 @@ className="
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="relative flex justify-end lg:-mt-10"
+            className="relative flex justify-center lg:-mt-10 lg:justify-end"
           >
 
             <div className="relative">
@@ -216,13 +218,17 @@ className="
               <div
                 className="
                   relative
-                  h-[520px]
-                  w-[400px]
+                  h-[420px]
+                  w-[min(92vw,340px)]
                   overflow-hidden
                   rounded-[32px]
                   bg-card
                   p-4
                   shadow-2xl
+                  sm:h-[460px]
+                  sm:w-[360px]
+                  lg:h-[520px]
+                  lg:w-[400px]
                 "
               >
                 <Image
@@ -230,6 +236,7 @@ className="
   alt={`${home.firstName} ${home.lastName}`}
   fill
   unoptimized
+  sizes="(max-width: 640px) 320px, (max-width: 1024px) 360px, 400px"
   className="rounded-2xl object-cover"
 />
               </div>

@@ -1,12 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Briefcase,
-  GraduationCap,
-  FlaskConical,
-  Globe,
-} from "lucide-react";
 
 
 export default function ExperienceHero() {
@@ -22,28 +16,34 @@ export default function ExperienceHero() {
       <div
         className="
           absolute
-          left-20
+          left-4
           top-16
-          h-72
-          w-72
+          h-48
+          w-48
           rounded-full
           bg-[var(--primary)]
           opacity-10
           blur-3xl
+          sm:left-20
+          sm:h-72
+          sm:w-72
         "
       />
 
       <div
         className="
           absolute
-          right-20
+          right-4
           bottom-10
-          h-80
-          w-80
+          h-52
+          w-52
           rounded-full
           bg-[var(--accent)]
           opacity-10
           blur-3xl
+          sm:right-20
+          sm:h-80
+          sm:w-80
         "
       />
 
@@ -79,12 +79,12 @@ export default function ExperienceHero() {
               border
               border-[var(--primary)]/20
               bg-[var(--primary)]/10
-              px-5
+              px-4
               py-2
               text-sm
               font-semibold
               uppercase
-              tracking-[0.25em]
+              tracking-[0.18em]
               text-[var(--primary)]
               shadow-sm
             "
@@ -98,7 +98,8 @@ export default function ExperienceHero() {
             className="
               heading-font
               mt-8
-              text-6xl
+              text-4xl
+              sm:text-5xl
               lg:text-7xl
               text-[var(--text)]
             "

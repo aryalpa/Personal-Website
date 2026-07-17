@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 
 export default function ContactHero() {
   return (
-    <section className="pb-20">
+    <section className="pb-16 sm:pb-20">
 
       <div className="mx-auto max-w-4xl text-center">
 
@@ -23,12 +23,13 @@ export default function ContactHero() {
             border
             border-border
             bg-primary-light
-            px-5
+            max-w-full
+            px-4
             py-2
             text-sm
             font-semibold
             uppercase
-            tracking-[0.25em]
+            tracking-[0.18em]
             text-primary
             shadow-sm
           "
@@ -50,12 +51,13 @@ export default function ContactHero() {
           className="
             heading-font
             mt-8
-            text-5xl
+            text-4xl
             text-text
+            sm:text-5xl
             md:text-6xl
           "
         >
-          Let's Collaborate
+          Let&apos;s Collaborate
         </motion.h1>
 
       </div>

@@ -73,7 +73,8 @@ export default function TalksHero() {
               border
               border-[var(--primary)]/20
               bg-[var(--primary)]/10
-              px-5
+              max-w-full
+              px-4
               py-2
               shadow-sm
               backdrop-blur-sm
@@ -90,8 +91,9 @@ export default function TalksHero() {
                 text-xs
                 font-semibold
                 uppercase
-                tracking-[0.35em]
+                tracking-[0.2em]
                 text-[var(--primary)]
+                sm:tracking-[0.35em]
               "
             >
               Scientific Presentations
@@ -105,9 +107,10 @@ export default function TalksHero() {
             className="
               heading-font
               mt-6
-              text-6xl
+              text-4xl
               leading-tight
               text-[var(--text)]
+              sm:text-5xl
               lg:text-7xl
             "
           >

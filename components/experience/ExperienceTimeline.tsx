@@ -42,7 +42,7 @@ export default function ExperienceTimeline({
 
           {/* Timeline Line */}
 
-          <div className="absolute left-[180px] top-0 bottom-0 w-[3px] -translate-x-1/2 rounded-full bg-border" />
+          <div className="absolute bottom-0 left-2 top-0 w-[3px] rounded-full bg-border md:left-[180px] md:-translate-x-1/2" />
 
           {experiences.map((item, index) => {
 
@@ -65,18 +65,18 @@ export default function ExperienceTimeline({
                   delay: index * 0.12,
                   duration: 0.55,
                 }}
-                className="relative flex gap-10 pb-20"
+                className="relative flex flex-col gap-5 pb-16 pl-8 md:flex-row md:gap-10 md:pb-20 md:pl-0"
               >
 
                 {/* Timeline */}
 
-                <div className="w-[160px] shrink-0 pr-12 text-right">
+                <div className="shrink-0 md:w-[160px] md:pr-12 md:text-right">
 
                   <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-light">
                     Timeline
                   </p>
 
-                  <p className="mt-2 whitespace-nowrap text-base font-semibold text-text">
+                  <p className="mt-2 text-base font-semibold text-text md:whitespace-nowrap">
                     {item.duration}
                   </p>
 
@@ -87,7 +87,7 @@ export default function ExperienceTimeline({
                 <div
                   className="
                     absolute
-                    left-[180px]
+                    left-2
                     top-4
                     h-5
                     w-5
@@ -97,6 +97,7 @@ export default function ExperienceTimeline({
                     border-card
                     bg-primary
                     shadow-lg
+                    md:left-[180px]
                   "
                 />
 
@@ -128,13 +129,13 @@ export default function ExperienceTimeline({
 
                   {/* Position */}
 
-                  <h3 className="mt-5 text-3xl font-bold text-text">
+                  <h3 className="mt-5 text-2xl font-bold text-text sm:text-3xl">
                     {item.position}
                   </h3>
 
                   {/* Institution */}
 
-                  <p className="mt-2 text-xl font-medium text-text-light">
+                  <p className="mt-2 text-lg font-medium text-text-light sm:text-xl">
                     {item.institution}
                   </p>
 

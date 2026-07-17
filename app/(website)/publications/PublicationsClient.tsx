@@ -17,7 +17,7 @@ interface Props {
 export default function PublicationsClient({
   publications,
 }: Props) {
-  const [search, setSearch] = useState("");
+  const search = "";
 
   const [activeFilter, setActiveFilter] =
     useState<PublicationFilter>("All");

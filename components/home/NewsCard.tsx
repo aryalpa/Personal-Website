@@ -31,18 +31,22 @@ export default function NewsCard({
       className={`
         grid
         items-center
-        gap-10
+        gap-5
         rounded-[32px]
         border
         border-[var(--border)]
         bg-[var(--card)]
-        p-8
+        p-4
         shadow-[0_10px_30px_rgba(47,52,47,0.08)]
         transition-all
         duration-300
         hover:-translate-y-1
         hover:shadow-[0_20px_45px_rgba(47,52,47,0.15)]
+        sm:gap-7
+        sm:p-6
+        lg:gap-10
         lg:grid-cols-2
+        lg:p-8
         ${reverse ? "lg:[&>*:first-child]:order-2" : ""}
       `}
     >
@@ -93,11 +97,14 @@ export default function NewsCard({
 
         <h3
           className="
-            mt-6
-            text-4xl
+            mt-4
+            text-xl
             font-bold
             leading-tight
             text-[var(--text)]
+            sm:text-2xl
+            lg:mt-6
+            lg:text-4xl
           "
         >
           {article.title}
@@ -107,10 +114,15 @@ export default function NewsCard({
 
         <p
           className="
-            mt-5
-            text-lg
-            leading-8
+            mt-3
+            text-sm
+            leading-6
             text-[var(--text-light)]
+            sm:text-base
+            sm:leading-7
+            lg:mt-5
+            lg:text-lg
+            lg:leading-8
           "
         >
           {article.subtitle}
@@ -123,13 +135,13 @@ export default function NewsCard({
           target="_blank"
           className="
             group
-            mt-8
+            mt-5
             inline-flex
             items-center
             gap-3
             rounded-full
             bg-[var(--primary)]
-            px-7
+            px-5
             py-3
             text-sm
             font-semibold
@@ -138,6 +150,8 @@ export default function NewsCard({
             duration-300
             hover:bg-[var(--accent)]
             hover:shadow-lg
+            sm:mt-8
+            lg:px-7
           "
         >
           Read Article

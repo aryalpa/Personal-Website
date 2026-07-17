@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -67,7 +66,7 @@ export default function FeaturedResearch({
         {/* Featured Card */}
 
         <div
-          className="relative mx-auto mt-20 flex max-w-[1250px] items-center justify-center px-24"
+          className="relative -mx-4 mt-12 flex max-w-[1250px] items-center justify-center px-0 sm:mx-auto sm:mt-16 sm:px-10 lg:mt-20 lg:px-24"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -93,14 +92,16 @@ export default function FeaturedResearch({
               backdrop-blur-xl
               shadow-xl
               transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:scale-110
-              hover:border-[var(--accent)]
-              hover:text-[var(--accent)]
-            "
+                duration-300
+                hover:-translate-y-1
+                hover:scale-110
+                hover:border-[var(--accent)]
+                hover:text-[var(--accent)]
+                max-sm:h-10
+                max-sm:w-10
+              "
           >
-            <ChevronLeft size={28} />
+            <ChevronLeft className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
 
           <AnimatePresence mode="wait">
@@ -131,7 +132,7 @@ export default function FeaturedResearch({
 
                   {/* IMAGE AREA */}
 
-                  <div className="relative h-[520px] w-full overflow-hidden rounded-[36px] bg-[var(--card)]">
+                  <div className="relative h-[380px] w-full overflow-hidden rounded-[36px] bg-[var(--card)] sm:h-[440px] lg:h-[520px]">
 
                     {/* Blurred Background */}
 
@@ -150,17 +151,20 @@ export default function FeaturedResearch({
 
                     {/* Foreground Image */}
 
-                    <div className="absolute inset-0 flex items-center justify-center p-8">
+                    <div className="absolute inset-0 flex items-center justify-center px-4 pb-24 pt-16 sm:px-6 sm:pb-28 sm:pt-20 lg:p-8">
 
                       <div
                         className="
                           rounded-3xl
                           bg-[rgba(252,251,248,0.95)]
-                          p-4
+                          p-2
                           shadow-[0_20px_50px_rgba(47,52,47,0.18)]
                           transition
                           duration-700
                           group-hover:scale-[1.02]
+                          w-full
+                          max-w-3xl
+                          sm:p-4
                         "
                       >
 
@@ -171,10 +175,15 @@ export default function FeaturedResearch({
                           height={650}
                           priority
                           className="
-                            max-h-[420px]
-                            w-auto
+                            h-auto
+                            max-h-[210px]
+                            max-w-full
+                            w-full
                             rounded-2xl
                             object-contain
+                            sm:max-h-[300px]
+                            lg:max-h-[420px]
+                            lg:w-auto
                           "
                         />
 
@@ -198,20 +207,24 @@ export default function FeaturedResearch({
                           border
                           border-white/15
                           bg-[rgba(47,52,47,0.55)]
-                          px-5
-                          py-2.5
+                          px-3
+                          py-2
                           backdrop-blur-xl
                           shadow-lg
+                          sm:px-5
+                          sm:py-2.5
                         "
                       >
 
                         <span
                           className="
-                            text-[11px]
+                            text-[9px]
                             font-semibold
                             uppercase
-                            tracking-[0.35em]
+                            tracking-[0.18em]
                             text-white
+                            sm:text-[11px]
+                            sm:tracking-[0.35em]
                           "
                         >
                           Featured Research
@@ -229,13 +242,14 @@ export default function FeaturedResearch({
 
                         {/* Accent Line */}
 
-                        <div className="mt-2 h-28 w-1 rounded-full bg-[var(--accent)]" />
+                        <div className="mt-1 h-16 w-1 rounded-full bg-[var(--accent)] sm:mt-2 sm:h-24 lg:h-28" />
 
                         <div className="max-w-xl">
 
                           <h3
                             className="
-                              text-4xl
+                              text-lg
+                              sm:text-2xl
                               lg:text-[42px]
                               font-bold
                               leading-tight
@@ -290,7 +304,7 @@ export default function FeaturedResearch({
   rel="noopener noreferrer"
   className="
     group
-    mt-6
+    mt-4
     inline-flex
     items-center
     gap-3
@@ -298,9 +312,9 @@ export default function FeaturedResearch({
     border
     border-white/20
     bg-white/10
-    px-5
-    py-3
-    text-sm
+    px-4
+    py-2.5
+    text-xs
     font-medium
     text-white
     backdrop-blur-lg
@@ -309,6 +323,11 @@ export default function FeaturedResearch({
     hover:bg-[var(--accent)]
     hover:text-[var(--primary-dark)]
     hover:shadow-xl
+    sm:mt-5
+    sm:text-sm
+    lg:mt-6
+    lg:px-5
+    lg:py-3
   "
 >
   Read Full Article
@@ -356,14 +375,16 @@ export default function FeaturedResearch({
               backdrop-blur-xl
               shadow-xl
               transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:scale-110
-              hover:border-[var(--accent)]
-              hover:text-[var(--accent)]
-            "
+                duration-300
+                hover:-translate-y-1
+                hover:scale-110
+                hover:border-[var(--accent)]
+                hover:text-[var(--accent)]
+                max-sm:h-10
+                max-sm:w-10
+              "
           >
-            <ChevronRight size={28} />
+            <ChevronRight className="h-5 w-5 sm:h-7 sm:w-7" />
           </button>
 
         </div>

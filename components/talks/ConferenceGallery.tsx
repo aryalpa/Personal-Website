@@ -25,12 +25,12 @@ export default function ConferenceGallery({
     }, 4500);
 
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [conferencePhotos.length, paused]);
 
   const current = conferencePhotos[selected];
 
   return (
-    <section className="mb-24">
+    <section className="mb-14 sm:mb-20 lg:mb-24">
 
       <div
         onMouseEnter={() => setPaused(true)}
@@ -39,7 +39,7 @@ export default function ConferenceGallery({
 
         {/* Heading */}
 
-        <div className="mb-10 text-center">
+        <div className="mb-6 text-center sm:mb-10">
 
           <span
             className="
@@ -48,13 +48,16 @@ export default function ConferenceGallery({
               border
               border-[var(--primary)]/20
               bg-[var(--primary)]/10
-              px-5
+              px-4
               py-2
-              text-sm
+              text-xs
               font-semibold
               uppercase
-              tracking-[0.3em]
+              tracking-[0.16em]
               text-[var(--primary)]
+              sm:px-5
+              sm:text-sm
+              sm:tracking-[0.3em]
             "
           >
             Conference Highlights
@@ -64,8 +67,10 @@ export default function ConferenceGallery({
             className="
               heading-font
               mt-5
-              text-4xl
+              text-2xl
               text-[var(--text)]
+              sm:text-3xl
+              lg:text-4xl
             "
           >
             Selected Moments from Research Conferences
@@ -89,7 +94,7 @@ export default function ConferenceGallery({
           "
         >
 
-          <div className="relative h-[500px] overflow-hidden rounded-[32px]">
+          <div className="relative h-[320px] overflow-hidden rounded-[32px] sm:h-[420px] lg:h-[500px]">
 
             {/* Blurred Background */}
 
@@ -103,14 +108,14 @@ export default function ConferenceGallery({
 
             {/* Main Image */}
 
-            <div className="absolute inset-0 flex items-center justify-center p-8">
+            <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
               <Image
                 src={urlFor(current.image).url()}
                 alt={current.title}
                 width={900}
                 height={600}
                 unoptimized
-                className="max-h-full w-auto rounded-2xl object-contain shadow-2xl"
+                className="max-h-full max-w-full w-auto rounded-2xl object-contain shadow-2xl"
               />
             </div>
 
@@ -133,10 +138,11 @@ export default function ConferenceGallery({
               <p
                 className="
                   text-right
-                  text-lg
+                  text-sm
                   font-semibold
                   leading-snug
                   text-white
+                  sm:text-lg
                 "
               >
                 {current.title}

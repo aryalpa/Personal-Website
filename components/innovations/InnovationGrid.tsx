@@ -47,12 +47,13 @@ export default function InnovationsGrid({
         hover:shadow-xl
       "
     >
-      <div className="relative h-[320px]">
+      <div className="relative h-[260px] bg-white p-3 sm:h-[320px]">
         <Image
           src={urlFor(item.image).url()}
           alt={item.title}
           fill
-          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-contain"
         />
       </div>
 
