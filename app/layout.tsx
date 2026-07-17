@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: {
     default: "Prakash Aryal",
     template: "%s | Prakash Aryal",
-  },
+  }, 
   description: "Academic Portfolio",
 };
 
