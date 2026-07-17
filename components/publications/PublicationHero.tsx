@@ -177,7 +177,7 @@ export default function PublicationsHero({
                   text-[var(--accent)]
                 "
               >
-                1800+
+                414
               </h2>
 
               <p
