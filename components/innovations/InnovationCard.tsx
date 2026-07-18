@@ -39,9 +39,20 @@ export default function InnovationCard({
 
       <div className="p-6">
 
-        <h2 className="text-xl font-semibold text-[#2F3B32]">
-         {innovation.title}
-        </h2>
+        {innovation.link ? (
+          <a
+            href={innovation.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-xl font-semibold text-[#2F3B32] transition-colors hover:text-[var(--accent)]"
+          >
+            {innovation.title}
+          </a>
+        ) : (
+          <h2 className="text-xl font-semibold text-[#2F3B32]">
+           {innovation.title}
+          </h2>
+        )}
 
       </div>
 

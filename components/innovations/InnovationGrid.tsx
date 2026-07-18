@@ -58,9 +58,20 @@ export default function InnovationsGrid({
       </div>
 
       <div className="p-5">
-        <h3 className="text-xl font-semibold text-[#3D4F43]">
-          {item.title}
-        </h3>
+        {item.link ? (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-xl font-semibold text-[#3D4F43] transition-colors hover:text-[var(--accent)]"
+          >
+            {item.title}
+          </a>
+        ) : (
+          <h3 className="text-xl font-semibold text-[#3D4F43]">
+            {item.title}
+          </h3>
+        )}
       </div>
     </div>
 

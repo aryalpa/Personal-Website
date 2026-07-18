@@ -4,4 +4,6 @@ export interface InnovationImage {
   title: string;
 
   image: any;
+
+  link?: string;
 }

@@ -4,4 +4,6 @@ export interface Innovation {
   title: string;
 
   video: any;
+
+  link?: string;
 }

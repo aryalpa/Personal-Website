@@ -24,6 +24,12 @@ export default defineType({
     }),
 
     defineField({
+      name: "link",
+      title: "Innovation Link",
+      type: "url",
+    }),
+
+    defineField({
       name: "order",
       title: "Display Order",
       type: "number",
