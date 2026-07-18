@@ -2,18 +2,16 @@
 
 const filters = [
   "All",
-  "Journal",
+  "Research Article",
   "Conference",
   "Review",
-  "Book Chapter",
 ] as const;
 
 export type PublicationFilter =
   | "All"
-  | "Journal"
+  | "Research Article"
   | "Conference"
-  | "Review"
-  | "Book Chapter";
+  | "Review";
 
 interface Props {
   activeFilter: PublicationFilter;
