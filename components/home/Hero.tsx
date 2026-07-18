@@ -19,7 +19,7 @@ interface HeroProps {
 
 export default function Hero({ home }: HeroProps) {
   return (
-    <section className="relative flex min-h-[calc(85vh-80px)] items-center overflow-hidden py-12 lg:py-0">
+    <section className="relative flex min-h-[640px] items-center overflow-hidden py-12 sm:min-h-[680px] lg:min-h-[700px] lg:py-16 xl:min-h-[720px]">
 
       {/* Magazine Banner Video */}
 
@@ -199,7 +199,7 @@ className="
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="relative flex justify-center lg:-mt-10 lg:justify-end"
+            className="relative flex justify-center lg:mt-8 lg:justify-end xl:mt-10"
           >
 
             <div className="relative">
