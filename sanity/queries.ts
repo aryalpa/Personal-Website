@@ -7,7 +7,7 @@ export const HOME_QUERY = `
   profileImage,
   profileVideo,
   backgroundVideo,
-  cv,
+  "cv": cv.asset->url,
   googleScholar,
   orcid,
   linkedin,
