@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Prakash Aryal",
     template: "%s | Prakash Aryal",
   }, 
-  description: "Academic Portfolio", 
+  description: "Academic Portfolio",  
 };
 
 export default function RootLayout({
