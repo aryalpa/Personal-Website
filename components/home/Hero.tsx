@@ -199,7 +199,7 @@ className="
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7 }}
-            className="relative flex justify-center lg:mt-3 lg:justify-end xl:mt-7"
+            className="relative flex justify-center lg:mt-3 lg:justify-end xl:mt-5"
           >
 
             <div className="relative">
