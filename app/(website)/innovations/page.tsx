@@ -13,6 +13,8 @@ const innovationImages = await client.fetch(
   INNOVATION_IMAGES_QUERY
 );
 
+export const dynamic = "force-dynamic";
+
 export default function InnovationsPage() {
   return (
     <main>

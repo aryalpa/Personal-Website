@@ -13,6 +13,8 @@ export const metadata = {
   title: "Talks",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function TalksPage() {
   const talks: Talk[] = await client.fetch(TALKS_QUERY);
 

@@ -11,6 +11,8 @@ export const metadata = {
   title: "Contact",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function ContactPage() {
   return (
     <main className="pt-8 pb-5">

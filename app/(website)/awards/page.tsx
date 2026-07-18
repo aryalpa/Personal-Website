@@ -9,6 +9,8 @@ export const metadata = {
   title: "Awards",
 };
 
+export const dynamic = "force-dynamic";
+
 const awards = await client.fetch(AWARDS_QUERY);
 
 export default function AwardsPage() {
