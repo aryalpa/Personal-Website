@@ -14,6 +14,8 @@ export default function AwardCard({
   award,
   index,
 }: Props) {
+  const showLink = index < 3 && award.link;
+
   return (
     <motion.div
       initial={{
@@ -92,17 +94,37 @@ export default function AwardCard({
 
       {/* Title */}
 
-      <h3
-        className="
-          mt-7
-          text-2xl
-          font-bold
-          leading-snug
-          text-slate-900
-        "
-      >
-        {award.title}
-      </h3>
+      {showLink ? (
+        <a
+          href={award.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            mt-7
+            block
+            text-2xl
+            font-bold
+            leading-snug
+            text-slate-900
+            transition-colors
+            hover:text-amber-600
+          "
+        >
+          {award.title}
+        </a>
+      ) : (
+        <h3
+          className="
+            mt-7
+            text-2xl
+            font-bold
+            leading-snug
+            text-slate-900
+          "
+        >
+          {award.title}
+        </h3>
+      )}
 
       {/* Organization */}
 

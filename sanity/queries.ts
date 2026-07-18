@@ -91,7 +91,8 @@ export const AWARDS_QUERY = `
   title,
   organization,
   period,
-  description
+  description,
+  link
 }
 `;
 
@@ -99,7 +100,8 @@ export const INNOVATIONS_QUERY = `
 *[_type=="innovation"] | order(order asc){
   _id,
   title,
-  video
+  video,
+  link
 }
 `;
 
@@ -107,7 +109,8 @@ export const INNOVATION_IMAGES_QUERY = `
 *[_type=="innovationImage"] | order(order asc){
   _id,
   title,
-  image
+  image,
+  link
 }
 `;
 

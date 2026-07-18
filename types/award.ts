@@ -8,4 +8,6 @@ export interface Award {
   period: string;
 
   description: string;
+
+  link?: string;
 }
