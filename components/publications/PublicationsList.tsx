@@ -129,7 +129,7 @@ export default function PublicationsList({
 
             {/* Year Heading */}
 
-            <div className="mb-10 flex items-center gap-6">
+            <div className="mb-5 flex items-center gap-4">
 
               <div className="h-px flex-1 bg-[var(--border)]" />
 
@@ -137,15 +137,15 @@ export default function PublicationsList({
                 className="
                   rounded-full
                   bg-[var(--primary)]
-                  px-8
-                  py-3
-                  shadow-lg
+                  px-5
+                  py-1.5
+                  shadow-md
                 "
               >
 
                 <h2
                   className="
-                    text-2xl
+                    text-lg
                     font-bold
                     text-white
                   "
@@ -161,7 +161,7 @@ export default function PublicationsList({
 
             {/* Cards */}
 
-            <div className="space-y-8">
+            <div className="space-y-3">
 
               {grouped[year].map((publication, index) => (
 

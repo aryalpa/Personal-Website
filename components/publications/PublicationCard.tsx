@@ -287,19 +287,19 @@ export default function PublicationCard({ publication }: Props) {
 
   return (
     <motion.article
-      whileHover={{ y: -8 }}
+      whileHover={{ y: -3 }}
       transition={{ duration: 0.25 }}
       className="
         group
         relative
         overflow-hidden
-        rounded-3xl
+        rounded-2xl
         border
         border-[var(--border)]
         bg-[var(--card)]
-        shadow-[0_10px_30px_rgba(47,52,47,0.08)]
+        shadow-[0_6px_20px_rgba(47,52,47,0.07)]
         transition-all
-        hover:shadow-[0_20px_45px_rgba(47,52,47,0.15)]
+        hover:shadow-[0_12px_28px_rgba(47,52,47,0.13)]
       "
     >
       {/* Accent Line */}
@@ -318,29 +318,29 @@ export default function PublicationCard({ publication }: Props) {
         "
       />
 
-      <div className="grid gap-5 p-4 sm:gap-8 sm:p-8 lg:grid-cols-[120px_1fr] lg:gap-10 lg:p-10">
+      <div className="grid gap-3 p-3 sm:p-4 lg:grid-cols-[76px_1fr] lg:gap-5 lg:p-5">
 
         {/* Left Year */}
 
-        <div className="flex items-center justify-center gap-3 lg:flex-col lg:gap-0">
+        <div className="flex items-center gap-2 lg:flex-col lg:gap-0">
 
           <div
             className="
-              rounded-xl
+              rounded-lg
               bg-[var(--primary)]
-              px-4
-              py-3
+              px-3
+              py-2
               text-center
               text-white
               shadow-lg
-              lg:rounded-2xl
-              lg:px-5
-              lg:py-4
+              lg:w-full
+              lg:px-2
+              lg:py-2.5
             "
           >
-            <Calendar className="mx-auto mb-1 h-4 w-4 lg:mb-2 lg:h-5 lg:w-5" />
+            <Calendar className="mx-auto mb-0.5 h-3.5 w-3.5" />
 
-            <p className="text-lg font-bold sm:text-xl lg:text-3xl">
+            <p className="text-base font-bold">
               {publication.year}
             </p>
 
@@ -350,16 +350,17 @@ export default function PublicationCard({ publication }: Props) {
             className="
               rounded-full
               bg-[var(--secondary)]
-              px-3
+              px-2.5
               py-1
-              text-[11px]
+              text-[10px]
               font-semibold
               uppercase
               tracking-wider
               text-[var(--primary)]
-              lg:mt-4
-              lg:px-4
-              lg:text-xs
+              lg:mt-2
+              lg:max-w-full
+              lg:px-2
+              lg:text-center
             "
           >
             {publication.type}
@@ -369,7 +370,7 @@ export default function PublicationCard({ publication }: Props) {
 
         {/* Right Content */}
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_220px]">
+        <div className="grid gap-3 sm:grid-cols-[1fr_112px] sm:items-center lg:grid-cols-[1fr_128px] lg:gap-5">
 
           {/* Left */}
 
@@ -377,22 +378,21 @@ export default function PublicationCard({ publication }: Props) {
 
             <h2
               className="
-                text-xl
+                text-base
                 font-bold
                 leading-tight
                 text-[var(--text)]
                 transition-colors
                 group-hover:text-[var(--accent)]
-                sm:text-2xl
-                lg:text-3xl
+                sm:text-lg
               "
             >
               {publication.title}
             </h2>
 
-            <div className="mt-4 flex items-start gap-2 text-sm text-[var(--primary)] sm:text-base lg:mt-5">
+            <div className="mt-2 flex items-start gap-1.5 text-xs text-[var(--primary)] sm:text-sm">
 
-              <BookOpen size={18} className="mt-1 shrink-0" />
+              <BookOpen size={14} className="mt-0.5 shrink-0" />
 
               <span className="font-semibold">
                 {publication.journal}
@@ -400,13 +400,13 @@ export default function PublicationCard({ publication }: Props) {
 
             </div>
 
-            <p className="mt-3 text-sm leading-6 text-[var(--text-light)] sm:text-base sm:leading-7 lg:mt-4 lg:leading-8">
+            <p className="mt-1.5 text-xs leading-5 text-[var(--text-light)] sm:text-sm sm:leading-5">
               {publication.authors}
             </p>
 
             {/* Keywords */}
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-2.5 flex flex-wrap gap-1.5">
 
               {publication.keywords.map((keyword) => (
 
@@ -415,11 +415,11 @@ export default function PublicationCard({ publication }: Props) {
                   className="
                     rounded-full
                     bg-[var(--secondary)]
-                    px-4
-                    py-2
-                    text-xs
+                    px-2.5
+                    py-1
+                    text-[10px]
                     text-[var(--text-light)]
-                    sm:text-sm
+                    sm:text-xs
                   "
                 >
                   {keyword}
@@ -431,7 +431,7 @@ export default function PublicationCard({ publication }: Props) {
 
             {/* Buttons */}
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:mt-8 lg:gap-4">
+            <div className="mt-3 flex flex-wrap gap-2">
 
               <Link
                 href={publication.link}
@@ -443,9 +443,9 @@ export default function PublicationCard({ publication }: Props) {
                   gap-2
                   rounded-full
                   bg-[var(--primary)]
-                  px-6
-                  py-3
-                  text-sm
+                  px-3.5
+                  py-1.5
+                  text-xs
                   font-medium
                   text-white
                   transition-all
@@ -455,7 +455,7 @@ export default function PublicationCard({ publication }: Props) {
               >
                 Read Paper
 
-                <ArrowRight size={18} />
+                <ArrowRight size={14} />
               </Link>
 
               <button
@@ -468,16 +468,16 @@ export default function PublicationCard({ publication }: Props) {
                   rounded-full
                   border
                   border-[var(--border)]
-                  px-6
-                  py-3
-                  text-sm
+                  px-3.5
+                  py-1.5
+                  text-xs
                   font-medium
                   transition-all
                   hover:border-[var(--accent)]
                   hover:text-[var(--accent)]
                 "
               >
-                <Copy size={18} />
+                <Copy size={14} />
 
                 Copy Citation
               </button>
@@ -488,17 +488,17 @@ export default function PublicationCard({ publication }: Props) {
 
           {/* Right Image — fixed box, never affects card size */}
 
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center sm:justify-end">
 
             <div
               className="
                 relative
-                h-44
+                h-28
                 w-full
-                max-w-52
+                max-w-36
                 shrink-0
                 overflow-hidden
-                rounded-2xl
+                rounded-xl
                 border
                 border-[var(--border)]
                 bg-white
@@ -506,8 +506,8 @@ export default function PublicationCard({ publication }: Props) {
                 flex
                 items-center
                 justify-center
-                sm:h-56
-                lg:h-64
+                sm:h-36
+                lg:h-40
               "
             >
               {publication.image ? (
@@ -516,12 +516,12 @@ export default function PublicationCard({ publication }: Props) {
                   alt={publication.title}
                   fill
                   unoptimized
-                  sizes="208px"
-                  className="object-contain p-3"
+                  sizes="(max-width: 639px) 144px, 128px"
+                  className="object-contain p-2"
                 />
               ) : (
                 <FileText
-                  size={40}
+                  size={28}
                   className="text-[var(--text-light)] opacity-30"
                 />
               )}

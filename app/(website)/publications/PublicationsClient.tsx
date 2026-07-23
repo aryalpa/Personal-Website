@@ -12,10 +12,12 @@ import type { Publication } from "@/types/publication";
 
 interface Props {
   publications: Publication[];
+  citationCount: number;
 }
 
 export default function PublicationsClient({
   publications,
+  citationCount,
 }: Props) {
   const search = "";
 
@@ -24,7 +26,10 @@ export default function PublicationsClient({
 
   return (
     <main className="pb-20">
-      <PublicationsHero publications={publications} />
+      <PublicationsHero
+        publications={publications}
+        citationCount={citationCount}
+      />
 
       <section className="pb-2">
         <Container>

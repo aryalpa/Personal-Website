@@ -6,10 +6,12 @@ import type { Publication } from "@/types/publication";
 
 interface Props {
   publications: Publication[];
+  citationCount: number;
 }
 
 export default function PublicationsHero({
   publications,
+  citationCount,
 }: Props) {
     const publicationCount = publications.length;
   return (
@@ -184,7 +186,7 @@ export default function PublicationsHero({
                   sm:text-4xl
                 "
               >
-                414
+                {citationCount}
               </h2>
 
               <p
