@@ -51,6 +51,12 @@ export const PUBLICATION_QUERY = `
 }
 `;
 
+export const PUBLICATION_PAGE_SETTINGS_QUERY = `
+*[_id == "publicationPageSettings"][0]{
+  citationCount
+}
+`;
+
 export const TALKS_QUERY = `
 *[_type=="talk"] | order(order asc){
   _id,

@@ -2,6 +2,7 @@ import research from "./research";
 import home from "./home";
 import news from "./news";
 import publication from "./publication";
+import publicationPageSettings from "./publicationPageSettings";
 import talk from "./talk";
 import conferencePhoto from "./conferencePhoto";
 import experience from "./experience";
@@ -15,6 +16,7 @@ export const schemaTypes = [
   research,
   news,
   publication,
+  publicationPageSettings,
   talk,
   conferencePhoto,
   experience,
