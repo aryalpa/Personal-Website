@@ -4,6 +4,10 @@ export const navigation = [
     href: "/",
   },
   {
+    title: "Innovations",
+    href: "/innovations",
+  },
+  {
     title: "Publications",
     href: "/publications",
   },
@@ -18,10 +22,6 @@ export const navigation = [
   {
     title: "Awards",
     href: "/awards",
-  },
-  {
-    title: "Innovations",
-    href: "/innovations",
   },
   {
     title: "Contact",
