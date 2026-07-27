@@ -32,7 +32,7 @@ export default async function TalksPage() {
 />
 
       {/* Talks */}
-      <section className="pb-32">
+      <section className="pb-20">
         <Container>
           <TalksSection talks={talks} />
         </Container>

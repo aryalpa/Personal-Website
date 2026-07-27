@@ -30,7 +30,7 @@ export default function TalksSection({
   );
 
   return (
-    <div className="space-y-28">
+    <div className="space-y-16">
 
       {/* ================================= */}
       {/* INVITED LECTURE */}
@@ -38,29 +38,29 @@ export default function TalksSection({
 
       <section>
 
-        <div className="mb-10 flex items-center gap-4">
+        <div className="mb-5 flex items-center gap-3">
 
           <div
             className="
               flex
-              h-14
-              w-14
+              h-10
+              w-10
               items-center
               justify-center
-              rounded-2xl
+              rounded-xl
               bg-[var(--accent)]
               text-white
               shadow-lg
             "
           >
-            <GraduationCap size={28} />
+            <GraduationCap size={20} />
           </div>
 
           <div>
 
             <h2
               className="
-                text-4xl
+                text-2xl
                 font-bold
                 text-[var(--text)]
               "
@@ -70,7 +70,8 @@ export default function TalksSection({
 
             <p
               className="
-                mt-2
+                mt-1
+                text-sm
                 text-[var(--text-light)]
               "
             >
@@ -81,7 +82,7 @@ export default function TalksSection({
 
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-3">
 
           {invited.map((talk, index) => (
 
@@ -119,29 +120,29 @@ export default function TalksSection({
 
       <section>
 
-        <div className="mb-10 flex items-center gap-4">
+        <div className="mb-5 flex items-center gap-3">
 
           <div
             className="
               flex
-              h-14
-              w-14
+              h-10
+              w-10
               items-center
               justify-center
-              rounded-2xl
+              rounded-xl
               bg-[var(--primary)]
               text-white
               shadow-lg
             "
           >
-            <Mic size={28} />
+            <Mic size={20} />
           </div>
 
           <div>
 
             <h2
               className="
-                text-4xl
+                text-2xl
                 font-bold
                 text-[var(--text)]
               "
@@ -151,7 +152,8 @@ export default function TalksSection({
 
             <p
               className="
-                mt-2
+                mt-1
+                text-sm
                 text-[var(--text-light)]
               "
             >
@@ -162,7 +164,7 @@ export default function TalksSection({
 
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-3">
 
           {oral.map((talk, index) => (
 
@@ -200,29 +202,29 @@ export default function TalksSection({
 
       <section>
 
-        <div className="mb-10 flex items-center gap-4">
+        <div className="mb-5 flex items-center gap-3">
 
           <div
             className="
               flex
-              h-14
-              w-14
+              h-10
+              w-10
               items-center
               justify-center
-              rounded-2xl
+              rounded-xl
               bg-[var(--accent)]
               text-white
               shadow-lg
             "
           >
-            <ImageIcon size={28} />
+            <ImageIcon size={20} />
           </div>
 
           <div>
 
             <h2
               className="
-                text-4xl
+                text-2xl
                 font-bold
                 text-[var(--text)]
               "
@@ -232,7 +234,8 @@ export default function TalksSection({
 
             <p
               className="
-                mt-2
+                mt-1
+                text-sm
                 text-[var(--text-light)]
               "
             >
@@ -243,7 +246,7 @@ export default function TalksSection({
 
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-3 lg:grid-cols-2">
 
           {poster.map((talk, index) => (
 

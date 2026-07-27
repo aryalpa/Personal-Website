@@ -19,21 +19,21 @@ export default function TalkCard({ talk }: Props) {
   return (
     <motion.article
       whileHover={{
-        y: -8,
+        y: -3,
       }}
       transition={{ duration: 0.25 }}
       className="
         group
         relative
         overflow-hidden
-        rounded-3xl
+        rounded-2xl
         border
         border-[var(--border)]
         bg-[var(--card)]
-        shadow-[0_10px_30px_rgba(47,52,47,0.08)]
+        shadow-[0_6px_20px_rgba(47,52,47,0.07)]
         transition-all
         duration-300
-        hover:shadow-[0_20px_45px_rgba(47,52,47,0.15)]
+        hover:shadow-[0_12px_28px_rgba(47,52,47,0.13)]
       "
     >
       {/* Hover Accent */}
@@ -52,21 +52,21 @@ export default function TalkCard({ talk }: Props) {
         "
       />
 
-      <div className="p-5 sm:p-6 lg:p-8">
+      <div className="p-4 sm:p-5">
 
         {/* Header */}
 
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-2">
 
           <span
             className={`
               rounded-full
-              px-4
-              py-2
-              text-xs
+              px-2.5
+              py-1
+              text-[10px]
               font-semibold
               uppercase
-              tracking-[0.25em]
+              tracking-wider
 
               ${
                 talk.type === "Invited"
@@ -85,7 +85,7 @@ export default function TalkCard({ talk }: Props) {
 
           <span
             className="
-              text-sm
+              text-xs
               font-semibold
               text-[var(--text-light)]
             "
@@ -99,17 +99,15 @@ export default function TalkCard({ talk }: Props) {
 
         <h2
           className="
-            mt-4
-            text-xl
+            mt-3
+            text-base
             font-bold
             leading-tight
             text-[var(--text)]
             transition-colors
             duration-300
             group-hover:text-[var(--accent)]
-            sm:text-2xl
-            lg:mt-6
-            lg:text-3xl
+            sm:text-lg
           "
         >
           {talk.title}
@@ -117,11 +115,11 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Event */}
 
-        <div className="mt-5 flex items-center gap-3 text-sm sm:text-base lg:mt-8">
+        <div className="mt-3 flex items-start gap-2 text-xs sm:text-sm">
 
           <Mic
-            size={20}
-            className="text-[var(--primary)]"
+            size={15}
+            className="mt-0.5 shrink-0 text-[var(--primary)]"
           />
 
           <span
@@ -137,11 +135,11 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Location */}
 
-        <div className="mt-3 flex items-center gap-3 text-sm sm:text-base lg:mt-4">
+        <div className="mt-2 flex items-start gap-2 text-xs sm:text-sm">
 
           <MapPin
-            size={18}
-            className="text-[var(--text-light)]"
+            size={14}
+            className="mt-0.5 shrink-0 text-[var(--text-light)]"
           />
 
           <span className="text-[var(--text-light)]">
@@ -152,11 +150,11 @@ export default function TalkCard({ talk }: Props) {
 
         {/* Date */}
 
-        <div className="mt-3 flex items-center gap-3 text-sm sm:text-base">
+        <div className="mt-2 flex items-start gap-2 text-xs sm:text-sm">
 
           <Calendar
-            size={18}
-            className="text-[var(--text-light)]"
+            size={14}
+            className="mt-0.5 shrink-0 text-[var(--text-light)]"
           />
 
           <span className="text-[var(--text-light)]">
@@ -169,14 +167,12 @@ export default function TalkCard({ talk }: Props) {
 
         <p
           className="
-            mt-5
-            text-sm
-            leading-6
+            mt-3
+            text-xs
+            leading-5
             text-[var(--text-light)]
-            sm:text-base
-            sm:leading-7
-            lg:mt-8
-            lg:leading-8
+            sm:text-sm
+            sm:leading-5
           "
         >
           {talk.description}
@@ -186,7 +182,7 @@ export default function TalkCard({ talk }: Props) {
 
         {talk.link && (
 
-          <div className="mt-5 lg:mt-8">
+          <div className="mt-3">
 
             <Link
               href={talk.link}
@@ -197,9 +193,9 @@ export default function TalkCard({ talk }: Props) {
                 gap-2
                 rounded-full
                 bg-[var(--primary)]
-                px-6
-                py-3
-                text-sm
+                px-3.5
+                py-1.5
+                text-xs
                 font-medium
                 text-white
                 transition-all
@@ -211,7 +207,7 @@ export default function TalkCard({ talk }: Props) {
             >
               Learn More
 
-              <ExternalLink size={18} />
+              <ExternalLink size={14} />
 
             </Link>
 
