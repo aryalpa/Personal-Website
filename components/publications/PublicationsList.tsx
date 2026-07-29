@@ -60,7 +60,7 @@ export default function PublicationsList({
     .sort((a, b) => b - a);
 
   return (
-    <div className="mt-20">
+    <div className="mt-6">
 
       <AnimatePresence>
 

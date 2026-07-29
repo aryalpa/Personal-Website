@@ -15,7 +15,7 @@ export default function PublicationsHero({
 }: Props) {
     const publicationCount = publications.length;
   return (
-    <section className="relative overflow-hidden pt-8 pb-5">
+    <section className="relative overflow-hidden pt-5 pb-2">
 
       {/* Background */}
 
@@ -105,7 +105,7 @@ export default function PublicationsHero({
           <h1
             className="
               heading-font
-              mt-8
+              mt-4
               text-4xl
               leading-tight
               text-[var(--text)]
@@ -118,7 +118,7 @@ export default function PublicationsHero({
 
           {/* Stats */}
 
-          <div className="mt-10 grid gap-5 sm:mt-16 sm:grid-cols-3 sm:gap-8">
+          <div className="mt-5 grid gap-3 sm:mt-6 sm:grid-cols-3 sm:gap-4">
 
             {/* Publications */}
 
@@ -128,13 +128,13 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-6
+                p-4
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
-                sm:p-8
+                sm:p-5
               "
             >
 
@@ -151,7 +151,7 @@ export default function PublicationsHero({
 
               <p
                 className="
-                  mt-3
+                  mt-1
                   text-[var(--text-light)]
                 "
               >
@@ -168,13 +168,13 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-6
+                p-4
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
-                sm:p-8
+                sm:p-5
               "
             >
 
@@ -191,7 +191,7 @@ export default function PublicationsHero({
 
               <p
                 className="
-                  mt-3
+                  mt-1
                   text-[var(--text-light)]
                 "
               >
@@ -208,13 +208,13 @@ export default function PublicationsHero({
                 border
                 border-[var(--border)]
                 bg-[var(--card)]
-                p-6
+                p-4
                 shadow-[0_10px_30px_rgba(47,52,47,0.08)]
                 transition
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-[0_20px_40px_rgba(47,52,47,0.15)]
-                sm:p-8
+                sm:p-5
               "
             >
 
@@ -229,7 +229,7 @@ export default function PublicationsHero({
 
               <p
                 className="
-                  mt-4
+                  mt-2
                   text-lg
                   font-semibold
                   text-[var(--text)]

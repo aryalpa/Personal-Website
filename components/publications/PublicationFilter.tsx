@@ -23,7 +23,7 @@ export default function PublicationFilters({
   setActiveFilter,
 }: Props) {
   return (
-    <div className="mt-10 flex flex-wrap justify-center gap-4">
+    <div className="mt-4 flex flex-wrap justify-center gap-3">
 
       {filters.map((filter) => {
 
@@ -35,8 +35,8 @@ export default function PublicationFilters({
             onClick={() => setActiveFilter(filter)}
             className={`
               rounded-full
-              px-6
-              py-3
+              px-5
+              py-2
               text-sm
               font-semibold
               transition-all
